@@ -48,7 +48,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary-dark text-primary-foreground shadow-gold font-tajawal text-lg px-8 py-6"
+              className="bg-primary hover:bg-primary-dark text-primary-foreground shadow-gold font-tajawal text-xl px-10 py-7 hover:scale-105 transform transition-all duration-300"
               onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               استكشف مشاريعنا
@@ -56,10 +56,10 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-primary text-primary-foreground hover:bg-primary/10 font-inter text-lg px-8 py-6"
+              className="border-2 border-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground font-tajawal text-xl px-10 py-7 hover:scale-105 transform transition-all duration-300"
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Contact Us
+              تواصل معنا
             </Button>
           </div>
 

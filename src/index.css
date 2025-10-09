@@ -121,10 +121,17 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-family: 'Tajawal', 'Inter', system-ui, -apple-system, sans-serif;
+    direction: rtl;
   }
   
   html {
     scroll-behavior: smooth;
+    direction: rtl;
+  }
+  
+  /* English text should be LTR */
+  .ltr {
+    direction: ltr;
   }
 }
 

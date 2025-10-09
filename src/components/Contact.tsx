@@ -128,7 +128,7 @@ const Contact = () => {
 
               <div className="pt-6">
                 <Button
-                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground shadow-gold font-tajawal text-lg py-6"
+                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground shadow-gold font-tajawal text-xl py-7 hover:scale-105 transform transition-all duration-300"
                   onClick={() => window.location.href = 'mailto:info@lumardevelop.com'}
                 >
                   أرسل لنا رسالة

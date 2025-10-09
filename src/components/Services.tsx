@@ -120,13 +120,10 @@ const Services = () => {
                     <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Icon className="h-7 w-7 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold font-tajawal text-foreground text-right">
+                    <h3 className="text-xl font-bold font-tajawal text-foreground text-right leading-relaxed">
                       {objective.titleAr}
                     </h3>
-                    <p className="text-sm font-inter text-muted-foreground">
-                      {objective.titleEn}
-                    </p>
-                    <p className="text-foreground/80 font-tajawal text-right leading-relaxed">
+                    <p className="text-foreground/80 font-tajawal text-right leading-relaxed text-lg">
                       {objective.descAr}
                     </p>
                   </CardContent>
@@ -152,12 +149,9 @@ const Services = () => {
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                     <span className="text-primary font-bold text-lg">{index + 1}</span>
                   </div>
-                  <h3 className="text-lg font-bold font-tajawal text-foreground">
+                  <h3 className="text-lg font-bold font-tajawal text-foreground leading-relaxed">
                     {service.titleAr}
                   </h3>
-                  <p className="text-sm font-inter text-muted-foreground">
-                    {service.titleEn}
-                  </p>
                 </CardContent>
               </Card>
             ))}

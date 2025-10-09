@@ -15,12 +15,9 @@ const About = () => {
             About Us
           </h3>
           
-          <div className="space-y-4 text-lg leading-relaxed">
-            <p className="text-foreground font-tajawal text-right">
+          <div className="space-y-6">
+            <p className="text-foreground font-tajawal text-right leading-loose text-xl">
               تُعد لومار من الشركات المتخصصة في التطوير العقاري، وتركز على تطوير واستثمار الأصول العقارية ذات القيمة العالية في سوريا، خاصة في ظل التعافي الاقتصادي المتسارع بعد الحرب. تهدف الشركة إلى خلق فرص استثمارية مجدية وآمنة للمستثمرين الأفراد والمؤسسات، بما يحقق عوائد مستدامة من خلال أدوات حديثة ومنهجية احترافية.
-            </p>
-            <p className="text-foreground/80 font-inter text-left">
-              LUMAR is a specialized real estate development company that focuses on high-value real estate opportunities in Syria. In light of the country's accelerating post-war recovery, LUMAR aims to create secure and profitable investment opportunities by developing land and real estate projects through modern tools and professional strategies.
             </p>
           </div>
 

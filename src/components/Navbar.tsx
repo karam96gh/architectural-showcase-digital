@@ -40,20 +40,20 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2 rtl:space-x-reverse">
+          <a href="#home" className="flex items-center gap-2">
             <img src={logo} alt="LUMAR Developments" className="h-12 sm:h-14 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
                 className="group relative text-foreground hover:text-primary transition-colors duration-300"
               >
-                <span className="font-tajawal font-medium">{item.label}</span>
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                <span className="font-tajawal font-medium text-lg">{item.label}</span>
+                <span className="absolute -bottom-1 right-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
           </div>
@@ -72,13 +72,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-card border-t border-border">
-          <div className="container mx-auto px-4 py-4 space-y-3">
+        <div className="md:hidden bg-card border-t border-border shadow-elegant">
+          <div className="container mx-auto px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-right px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-300 font-tajawal font-medium"
+                className="block w-full text-right px-6 py-4 text-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-tajawal font-medium text-lg"
               >
                 {item.label}
               </button>
