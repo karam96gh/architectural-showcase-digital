@@ -54,24 +54,23 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
           {/* Office Locations */}
           <Card className="shadow-elegant">
-            <CardContent className="p-8 space-y-6">
+            <CardContent className="p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold font-tajawal text-foreground">الفروع</h3>
-                  <p className="text-lg font-inter text-muted-foreground">Offices</p>
                 </div>
               </div>
 
               {offices.map((office, index) => (
-                <div key={index} className="space-y-4">
+                <div key={index} className="space-y-3 flex-grow">
                   <h4 className="text-xl font-bold font-tajawal text-primary border-b-2 border-primary/20 pb-2">
                     الدولة: {office.country}
                   </h4>
                   {office.branches.map((branch, branchIndex) => (
-                    <div key={branchIndex} className="pr-4 space-y-2">
+                    <div key={branchIndex} className="pr-4 space-y-1">
                       <p className="text-lg font-tajawal text-foreground">
                         <span className="font-bold text-accent">فرع {branch.city}:</span>
                       </p>
@@ -82,38 +81,29 @@ const Contact = () => {
                   ))}
                 </div>
               ))}
-
-              <div className="pt-6 border-t border-border">
-                <p className="text-sm text-muted-foreground font-inter text-center">
-                  Syria - Aleppo: Al-Furqan - In front of University Campus
-                  <br />
-                  Syria - Damascus: Al-Mazzeh Road
-                </p>
-              </div>
             </CardContent>
           </Card>
 
           {/* Contact Information */}
           <Card className="shadow-elegant">
-            <CardContent className="p-8 space-y-6">
+            <CardContent className="p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold font-tajawal text-foreground">التواصل</h3>
-                  <p className="text-lg font-inter text-muted-foreground">Contact</p>
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-2 flex-grow">
                 {contacts.map((contact, index) => {
                   const Icon = contact.icon;
                   return (
                     <a
                       key={index}
                       href={contact.link}
-                      className="flex items-center gap-4 p-4 rounded-lg hover:bg-primary/5 transition-all duration-300 group"
+                      className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/5 transition-all duration-300 group"
                     >
                       <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                         <Icon className="h-5 w-5 text-primary" />

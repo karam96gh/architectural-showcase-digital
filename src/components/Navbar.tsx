@@ -39,12 +39,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
-            <img src={logo} alt="LUMAR Developments" className="h-16 sm:h-18 w-auto" />
-          </a>
-
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Right Side */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
@@ -57,6 +52,11 @@ const Navbar = () => {
               </button>
             ))}
           </div>
+
+          {/* Logo - Left Side */}
+          <a href="#home" className="flex items-center gap-2">
+            <img src={logo} alt="LUMAR Developments" className="h-20 sm:h-22 w-auto" />
+          </a>
 
           {/* Mobile Menu Button */}
           <Button

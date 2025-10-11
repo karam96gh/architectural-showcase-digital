@@ -19,71 +19,73 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team, Vision, Mission, Values - Tabs */}
-        <Tabs defaultValue="team" className="max-w-6xl mx-auto" dir="rtl">
-          <TabsList className="grid w-full grid-cols-4 mb-8 h-auto">
-            <TabsTrigger value="team" className="font-tajawal text-base py-3">فريق العمل</TabsTrigger>
+        {/* Team Section - Standalone */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <h3 className="text-2xl font-bold font-tajawal text-gradient-gold mb-8 text-center">
+            فريق العمل
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Adnan Lutfi */}
+            <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20">
+                    <img 
+                      src={adnanLutfi} 
+                      alt="Adnan Lutfi"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold font-tajawal text-foreground mb-1">
+                      م. عدنان لطفي
+                    </h4>
+                    <p className="text-primary font-tajawal font-semibold mb-3">
+                      الرئيس التنفيذي ومؤسس مشارك
+                    </p>
+                    <p className="text-foreground/80 font-tajawal leading-relaxed">
+                      مهندس معماري خبرة تمتد لأكثر من ٣٥ عاماً، مع سجل حافل في تطوير مشاريع عقارية متميزة
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Husam Lutfi */}
+            <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20">
+                    <img 
+                      src={husamLutfi} 
+                      alt="Husam Lutfi"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold font-tajawal text-foreground mb-1">
+                      م. حسام لطفي
+                    </h4>
+                    <p className="text-primary font-tajawal font-semibold mb-3">
+                      نائب الرئيس التنفيذي ومؤسس مشارك
+                    </p>
+                    <p className="text-foreground/80 font-tajawal leading-relaxed">
+                      مهندس معماري متخصص في إدارة المشاريع الكبرى والتصميم المعماري المعاصر
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Vision, Mission, Values - Tabs */}
+        <Tabs defaultValue="vision" className="max-w-6xl mx-auto" dir="rtl">
+          <TabsList className="grid w-full grid-cols-3 mb-8 h-auto">
             <TabsTrigger value="vision" className="font-tajawal text-base py-3">الرؤية</TabsTrigger>
             <TabsTrigger value="mission" className="font-tajawal text-base py-3">الرسالة</TabsTrigger>
             <TabsTrigger value="values" className="font-tajawal text-base py-3">القيم</TabsTrigger>
           </TabsList>
-
-          {/* Team */}
-          <TabsContent value="team">
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Adnan Lutfi */}
-              <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20">
-                      <img 
-                        src={adnanLutfi} 
-                        alt="Adnan Lutfi"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold font-tajawal text-foreground mb-1">
-                        م. عدنان لطفي
-                      </h4>
-                      <p className="text-primary font-tajawal font-semibold mb-3">
-                        الرئيس التنفيذي ومؤسس مشارك
-                      </p>
-                      <p className="text-foreground/80 font-tajawal leading-relaxed">
-                        مهندس معماري خبرة تمتد لأكثر من ٣٥ عاماً، مع سجل حافل في تطوير مشاريع عقارية متميزة
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Husam Lutfi */}
-              <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20">
-                      <img 
-                        src={husamLutfi} 
-                        alt="Husam Lutfi"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold font-tajawal text-foreground mb-1">
-                        م. حسام لطفي
-                      </h4>
-                      <p className="text-primary font-tajawal font-semibold mb-3">
-                        نائب الرئيس التنفيذي ومؤسس مشارك
-                      </p>
-                      <p className="text-foreground/80 font-tajawal leading-relaxed">
-                        مهندس معماري متخصص في إدارة المشاريع الكبرى والتصميم المعماري المعاصر
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </TabsContent>
 
           {/* Vision */}
           <TabsContent value="vision">
@@ -128,34 +130,64 @@ const About = () => {
           {/* Values */}
           <TabsContent value="values">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Card className="shadow-elegant">
+              <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg font-bold font-tajawal text-foreground">الشفافية والمصداقية</p>
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-2xl">✓</span>
+                    </div>
+                    <p className="text-lg font-bold font-tajawal text-foreground">الشفافية والمصداقية</p>
+                  </div>
                 </CardContent>
               </Card>
-              <Card className="shadow-elegant">
+              <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg font-bold font-tajawal text-foreground">الكفاءة المهنية</p>
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-2xl">⚡</span>
+                    </div>
+                    <p className="text-lg font-bold font-tajawal text-foreground">الكفاءة المهنية</p>
+                  </div>
                 </CardContent>
               </Card>
-              <Card className="shadow-elegant">
+              <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg font-bold font-tajawal text-foreground">الابتكار العقاري</p>
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-2xl">💡</span>
+                    </div>
+                    <p className="text-lg font-bold font-tajawal text-foreground">الابتكار العقاري</p>
+                  </div>
                 </CardContent>
               </Card>
-              <Card className="shadow-elegant">
+              <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg font-bold font-tajawal text-foreground">حماية حقوق المستثمرين</p>
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-2xl">🛡️</span>
+                    </div>
+                    <p className="text-lg font-bold font-tajawal text-foreground">حماية حقوق المستثمرين</p>
+                  </div>
                 </CardContent>
               </Card>
-              <Card className="shadow-elegant">
+              <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg font-bold font-tajawal text-foreground">المسؤولية الاجتماعية</p>
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-2xl">🤝</span>
+                    </div>
+                    <p className="text-lg font-bold font-tajawal text-foreground">المسؤولية الاجتماعية</p>
+                  </div>
                 </CardContent>
               </Card>
-              <Card className="shadow-elegant">
+              <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg font-bold font-tajawal text-foreground">تحقيق عوائد مستدامة</p>
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-2xl">📈</span>
+                    </div>
+                    <p className="text-lg font-bold font-tajawal text-foreground">تحقيق عوائد مستدامة</p>
+                  </div>
                 </CardContent>
               </Card>
             </div>

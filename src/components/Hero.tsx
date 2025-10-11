@@ -25,20 +25,20 @@ const Hero = () => {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-tajawal">
             <span className="text-gradient-gold">لومار</span>
             <br />
-            <span className="text-primary-foreground">للتطوير العقاري</span>
+            <span className="text-black">للتطوير العقاري</span>
           </h1>
 
           {/* English Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-inter text-primary-foreground/90">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-inter text-black/90">
             LUMAR Developments
           </h2>
 
           {/* Tagline */}
-          <p className="text-xl sm:text-2xl text-primary-foreground/80 font-tajawal max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-black/80 font-tajawal max-w-3xl mx-auto leading-relaxed">
             شركة متخصصة في التطوير العقاري عالي القيمة في سوريا منذ 1986
           </p>
 
-          <p className="text-lg sm:text-xl text-primary-foreground/70 font-inter max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-black/70 font-inter max-w-3xl mx-auto">
             Real Estate Development in the New Syria Since 1986
           </p>
 

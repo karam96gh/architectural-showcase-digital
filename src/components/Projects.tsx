@@ -164,11 +164,11 @@ const Projects = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
           {stats.map((stat, index) => (
             <Card key={index} className="shadow-elegant hover:shadow-gold transition-all duration-300">
-              <CardContent className="p-4 text-center space-y-2">
-                <p className="text-2xl sm:text-3xl font-bold text-primary font-inter">
+              <CardContent className="p-3 text-center space-y-1">
+                <p className="text-xl sm:text-2xl font-bold text-primary font-inter">
                   <CountUp end={stat.value} suffix={stat.suffix} duration={2500} />
                 </p>
-                <h3 className="text-sm font-bold font-tajawal text-foreground">{stat.labelAr}</h3>
+                <h3 className="text-xs sm:text-sm font-bold font-tajawal text-foreground">{stat.labelAr}</h3>
               </CardContent>
             </Card>
           ))}
