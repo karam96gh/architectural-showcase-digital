@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <img src={logo} alt="LUMAR Developments" className="h-12 sm:h-14 w-auto" />
+            <img src={logo} alt="LUMAR Developments" className="h-16 sm:h-18 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
@@ -50,7 +50,7 @@ const Navbar = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="group relative text-foreground hover:text-primary transition-colors duration-300"
+                className="group relative text-foreground/90 hover:text-primary transition-colors duration-300"
               >
                 <span className="font-tajawal font-medium text-lg">{item.label}</span>
                 <span className="absolute -bottom-1 right-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -78,7 +78,7 @@ const Navbar = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-right px-6 py-4 text-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-tajawal font-medium text-lg"
+                className="block w-full text-right px-6 py-4 text-foreground/90 hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-tajawal font-medium text-lg"
               >
                 {item.label}
               </button>

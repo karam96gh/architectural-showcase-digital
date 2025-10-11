@@ -1,5 +1,5 @@
 import { Card, CardContent } from './ui/card';
-import { Building2, TrendingUp, Users, Shield, Lightbulb, Target } from 'lucide-react';
+import { Building2, TrendingUp, Users, Shield, Lightbulb, Target, FileText, DollarSign, UserCheck, BarChart3, TrendingDown, Briefcase, Home } from 'lucide-react';
 
 const Services = () => {
   const objectives = [
@@ -43,35 +43,35 @@ const Services = () => {
   const services = [
     {
       titleAr: 'وضع فكرة المشروع',
-      titleEn: 'Project Concept Development',
+      icon: Lightbulb,
     },
     {
       titleAr: 'إجراء دراسات الجدوى',
-      titleEn: 'Feasibility Studies',
+      icon: FileText,
     },
     {
       titleAr: 'تأمين مصادر التمويل',
-      titleEn: 'Funding Solutions',
+      icon: DollarSign,
     },
     {
       titleAr: 'اختيار الاستشاريين والمقاولين',
-      titleEn: 'Consultant and Contractor Selection',
+      icon: UserCheck,
     },
     {
       titleAr: 'دراسة السوق',
-      titleEn: 'Market Research',
+      icon: BarChart3,
     },
     {
       titleAr: 'إعداد استراتيجية تسويق ومبيعات',
-      titleEn: 'Sales and Marketing Strategy',
+      icon: TrendingUp,
     },
     {
       titleAr: 'تطوير وإعادة تأهيل العقارات',
-      titleEn: 'Property Redevelopment',
+      icon: Home,
     },
     {
       titleAr: 'إدارة المشروع',
-      titleEn: 'Project Management',
+      icon: Briefcase,
     },
   ];
 
@@ -87,45 +87,48 @@ const Services = () => {
   const scope = [
     {
       titleAr: 'الاستحواذ على الأراضي الاستراتيجية وتطويرها',
-      titleEn: 'Acquisition and development of strategic lands',
+      icon: Target,
     },
     {
       titleAr: 'بناء مشاريع عمرانية متكاملة',
-      titleEn: 'Construction of integrated urban projects',
+      icon: Building2,
     },
     {
       titleAr: 'تأسيس وإدارة صناديق عقارية خاصة أو جماعية',
-      titleEn: 'Establishment and management of private or public real estate funds',
+      icon: TrendingUp,
     },
   ];
 
   return (
-    <section id="services" className="py-20 bg-muted/30">
+    <section id="services" className="py-16 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Strategic Objectives */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold font-tajawal text-gradient-gold mb-2">
+        <div className="mb-16">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold font-tajawal text-gradient-gold">
               الأهداف الاستراتيجية
             </h2>
-            <p className="text-3xl font-inter text-secondary">Strategic Objectives</p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
             {objectives.map((objective, index) => {
               const Icon = objective.icon;
               return (
                 <Card key={index} className="shadow-elegant hover:shadow-gold transition-all duration-300 group">
-                  <CardContent className="p-6 space-y-4">
-                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Icon className="h-7 w-7 text-primary" />
+                  <CardContent className="p-5">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="flex-1 text-right">
+                        <h3 className="text-lg font-bold font-tajawal text-foreground leading-relaxed mb-2">
+                          {objective.titleAr}
+                        </h3>
+                        <p className="text-foreground/80 font-tajawal leading-relaxed text-base">
+                          {objective.descAr}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-bold font-tajawal text-foreground text-right leading-relaxed">
-                      {objective.titleAr}
-                    </h3>
-                    <p className="text-foreground/80 font-tajawal text-right leading-relaxed text-lg">
-                      {objective.descAr}
-                    </p>
                   </CardContent>
                 </Card>
               );
@@ -134,81 +137,51 @@ const Services = () => {
         </div>
 
         {/* Services */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold font-tajawal text-gradient-gold mb-2">
+        <div className="mb-16">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold font-tajawal text-gradient-gold">
               الخدمات
             </h2>
-            <p className="text-3xl font-inter text-secondary">Services</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            {services.map((service, index) => (
-              <Card key={index} className="shadow-elegant hover:shadow-gold transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6 space-y-2 text-center">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                    <span className="text-primary font-bold text-lg">{index + 1}</span>
-                  </div>
-                  <h3 className="text-lg font-bold font-tajawal text-foreground leading-relaxed">
-                    {service.titleAr}
-                  </h3>
-                </CardContent>
-              </Card>
-            ))}
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <Card key={index} className="shadow-elegant hover:shadow-gold transition-all duration-300 hover:-translate-y-1">
+                  <CardContent className="p-5 space-y-3 text-center">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                      <Icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-base font-bold font-tajawal text-foreground leading-relaxed">
+                      {service.titleAr}
+                    </h3>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
 
         {/* Scope of Work */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold font-tajawal text-gradient-gold mb-2">
+        <div className="mb-16">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold font-tajawal text-gradient-gold">
               مجالات العمل
             </h2>
-            <p className="text-3xl font-inter text-secondary">Scope of Work</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {scope.map((item, index) => (
-              <Card key={index} className="shadow-elegant hover:shadow-gold transition-all duration-300 border-2 border-primary/20">
-                <CardContent className="p-8 space-y-4 text-center">
-                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto">
-                    <Building2 className="h-8 w-8 text-primary" />
-                  </div>
-                  <p className="text-lg font-tajawal text-foreground leading-relaxed text-right">
-                    {item.titleAr}
-                  </p>
-                  <p className="text-sm font-inter text-muted-foreground text-left">
-                    {item.titleEn}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Values */}
-        <div>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold font-tajawal text-gradient-gold mb-2">
-              القيم
-            </h2>
-            <p className="text-3xl font-inter text-secondary">Values</p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {values.map((value, index) => {
-              const Icon = value.icon;
+          <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            {scope.map((item, index) => {
+              const Icon = item.icon;
               return (
-                <Card key={index} className="shadow-elegant hover:shadow-gold transition-all duration-300 group">
-                  <CardContent className="p-6 space-y-4 text-center">
-                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
+                <Card key={index} className="shadow-elegant hover:shadow-gold transition-all duration-300 border-2 border-primary/20">
+                  <CardContent className="p-6 text-center space-y-4">
+                    <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto">
                       <Icon className="h-7 w-7 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold font-tajawal text-foreground">
-                      {value.titleAr}
-                    </h3>
-                    <p className="text-sm font-inter text-muted-foreground">
-                      {value.titleEn}
+                    <p className="text-base font-bold font-tajawal text-foreground leading-relaxed">
+                      {item.titleAr}
                     </p>
                   </CardContent>
                 </Card>
@@ -216,6 +189,7 @@ const Services = () => {
             })}
           </div>
         </div>
+
       </div>
     </section>
   );

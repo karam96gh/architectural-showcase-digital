@@ -12,13 +12,11 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/95 via-secondary/90 to-secondary/95" />
-      </div>
+      />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
@@ -56,7 +54,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground font-tajawal text-xl px-10 py-7 hover:scale-105 transform transition-all duration-300"
+              className="border-2 border-primary bg-background/80 text-foreground hover:bg-primary hover:text-primary-foreground font-tajawal text-xl px-10 py-7 hover:scale-105 transform transition-all duration-300"
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               تواصل معنا

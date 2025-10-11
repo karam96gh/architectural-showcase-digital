@@ -1,151 +1,166 @@
 import { Card, CardContent } from './ui/card';
-import adnanImg from '@/assets/adnan-lutfi.png';
-import husamImg from '@/assets/husam-lutfi.png';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import adnanLutfi from '@/assets/adnan-lutfi.png';
+import husamLutfi from '@/assets/husam-lutfi.png';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-16 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Introduction */}
-        <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
-          <h2 className="text-4xl sm:text-5xl font-bold font-tajawal text-gradient-gold">
+        {/* Company Introduction */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold font-tajawal text-gradient-gold mb-4">
             من نحن
           </h2>
-          <h3 className="text-3xl sm:text-4xl font-bold font-inter text-secondary">
-            About Us
-          </h3>
-          
-          <div className="space-y-6">
-            <p className="text-foreground font-tajawal text-right leading-loose text-xl">
-              تُعد لومار من الشركات المتخصصة في التطوير العقاري، وتركز على تطوير واستثمار الأصول العقارية ذات القيمة العالية في سوريا، خاصة في ظل التعافي الاقتصادي المتسارع بعد الحرب. تهدف الشركة إلى خلق فرص استثمارية مجدية وآمنة للمستثمرين الأفراد والمؤسسات، بما يحقق عوائد مستدامة من خلال أدوات حديثة ومنهجية احترافية.
-            </p>
-          </div>
-
-          {/* Founded Year */}
-          <div className="inline-block bg-primary/10 border-2 border-primary rounded-lg px-8 py-4 mt-8">
-            <p className="text-3xl font-bold text-primary font-tajawal">
-              سنة التأسيس: <span className="text-4xl">1986</span>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-lg font-tajawal text-foreground/90 leading-relaxed text-center">
+              شركة متخصصة في التطوير العقاري عالي القيمة في سوريا، تركيزنا الأساسي على الاستثمار في الأصول ذات الأداء المرتفع واقتناص الفرص الاستثمارية الأفضل، بالاعتماد على الخبرة الطويلة في مجال التطوير العقاري التي تمتد منذ عام ١٩٨٦
             </p>
           </div>
         </div>
 
-        {/* Team Section */}
-        <div className="mt-20">
-          <h3 className="text-3xl sm:text-4xl font-bold font-tajawal text-center mb-12 text-gradient-gold">
-            فريق العمل
-          </h3>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Adnan Lutfi */}
-            <Card className="overflow-hidden shadow-elegant hover:shadow-gold transition-all duration-300">
-              <CardContent className="p-0">
-                <div className="aspect-square overflow-hidden bg-muted">
-                  <img 
-                    src={adnanImg} 
-                    alt="Arch. Adnan Lutfi"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6 space-y-3 text-center">
-                  <h4 className="text-2xl font-bold font-tajawal text-primary">
-                    المهندس عدنان لطفي
-                  </h4>
-                  <p className="text-xl font-inter text-secondary">
-                    Arch. Adnan Lutfi
-                  </p>
-                  <p className="text-lg font-tajawal text-accent">
-                    المؤسس ورئيس الشركة
-                  </p>
-                  <p className="text-md font-inter text-muted-foreground">
-                    Founder & Company Manager
-                  </p>
-                  <div className="pt-4 space-y-2 text-foreground/80">
-                    <p className="font-tajawal text-right">
-                      مع أكثر من 50 عاماً من الخبرة، جمع بين العمق الهندسي والحنكة التجارية
-                    </p>
-                    <p className="font-inter text-sm text-left">
-                      Co-founder of the Syrian Businessmen Association in Turkey (SURYAD) and member of the Turkish Businessmen Association. With over 50 years of experience, he has combined engineering depth with business acumen.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+        {/* Team, Vision, Mission, Values - Tabs */}
+        <Tabs defaultValue="team" className="max-w-6xl mx-auto" dir="rtl">
+          <TabsList className="grid w-full grid-cols-4 mb-8 h-auto">
+            <TabsTrigger value="team" className="font-tajawal text-base py-3">فريق العمل</TabsTrigger>
+            <TabsTrigger value="vision" className="font-tajawal text-base py-3">الرؤية</TabsTrigger>
+            <TabsTrigger value="mission" className="font-tajawal text-base py-3">الرسالة</TabsTrigger>
+            <TabsTrigger value="values" className="font-tajawal text-base py-3">القيم</TabsTrigger>
+          </TabsList>
 
-            {/* Husam Lutfi */}
-            <Card className="overflow-hidden shadow-elegant hover:shadow-gold transition-all duration-300">
-              <CardContent className="p-0">
-                <div className="aspect-square overflow-hidden bg-muted">
-                  <img 
-                    src={husamImg} 
-                    alt="Arch. Husam Lutfi"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6 space-y-3 text-center">
-                  <h4 className="text-2xl font-bold font-tajawal text-primary">
-                    المهندس حسام لطفي
-                  </h4>
-                  <p className="text-xl font-inter text-secondary">
-                    Arch. Husam Lutfi
-                  </p>
-                  <p className="text-lg font-tajawal text-accent">
-                    المدير التنفيذي
-                  </p>
-                  <p className="text-md font-inter text-muted-foreground">
-                    CEO
-                  </p>
-                  <div className="pt-4 space-y-2 text-foreground/80">
-                    <p className="font-tajawal text-right">
-                      بكالوريوس هندسة معمارية - ماجستير تخطيط حضري
-                    </p>
-                    <p className="font-tajawal text-right text-sm">
-                      تخرّج عام 1974 من كلية الهندسة المعمارية - جامعة حلب
-                    </p>
+          {/* Team */}
+          <TabsContent value="team">
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Adnan Lutfi */}
+              <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20">
+                      <img 
+                        src={adnanLutfi} 
+                        alt="Adnan Lutfi"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold font-tajawal text-foreground mb-1">
+                        م. عدنان لطفي
+                      </h4>
+                      <p className="text-primary font-tajawal font-semibold mb-3">
+                        الرئيس التنفيذي ومؤسس مشارك
+                      </p>
+                      <p className="text-foreground/80 font-tajawal leading-relaxed">
+                        مهندس معماري خبرة تمتد لأكثر من ٣٥ عاماً، مع سجل حافل في تطوير مشاريع عقارية متميزة
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+                </CardContent>
+              </Card>
 
-        {/* Vision & Mission */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-20">
+              {/* Husam Lutfi */}
+              <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20">
+                      <img 
+                        src={husamLutfi} 
+                        alt="Husam Lutfi"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold font-tajawal text-foreground mb-1">
+                        م. حسام لطفي
+                      </h4>
+                      <p className="text-primary font-tajawal font-semibold mb-3">
+                        نائب الرئيس التنفيذي ومؤسس مشارك
+                      </p>
+                      <p className="text-foreground/80 font-tajawal leading-relaxed">
+                        مهندس معماري متخصص في إدارة المشاريع الكبرى والتصميم المعماري المعاصر
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </TabsContent>
+
           {/* Vision */}
-          <Card className="shadow-elegant hover:shadow-gold transition-all duration-300 border-2 border-primary/20">
-            <CardContent className="p-8 space-y-4">
-              <h4 className="text-3xl font-bold font-tajawal text-gradient-gold text-center">
-                الرؤيا
-              </h4>
-              <p className="text-xl font-inter text-secondary text-center">Vision</p>
-              <div className="space-y-3 pt-4">
-                <p className="text-foreground font-tajawal text-right leading-relaxed">
-                  أن نكون الشركة الرائدة في التطوير العقاري في سوريا، ومرجعًا موثوقًا للمستثمرين الباحثين عن فرص نمو حقيقية ضمن بيئة آمنة ومحفزة.
-                </p>
-                <p className="text-foreground/80 font-inter text-left text-sm leading-relaxed">
-                  To be the leading real estate development in Syria, and the trusted reference for investors seeking real growth opportunities in a safe and promising environment.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+          <TabsContent value="vision">
+            <Card className="shadow-elegant">
+              <CardContent className="p-8">
+                <div className="text-center space-y-4">
+                  <h4 className="text-2xl font-bold font-tajawal text-gradient-gold">
+                    رؤيتنا
+                  </h4>
+                  <p className="text-lg font-tajawal text-foreground/90 leading-relaxed max-w-3xl mx-auto">
+                    أن نكون الشركة الرائدة في تطوير المشاريع العقارية الاستثمارية في سوريا والمرجع الموثوق للمستثمرين في تحقيق عوائد آمنة ومستدامة
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
 
           {/* Mission */}
-          <Card className="shadow-elegant hover:shadow-gold transition-all duration-300 border-2 border-primary/20">
-            <CardContent className="p-8 space-y-4">
-              <h4 className="text-3xl font-bold font-tajawal text-gradient-gold text-center">
-                الرسالة
-              </h4>
-              <p className="text-xl font-inter text-secondary text-center">Mission</p>
-              <div className="space-y-3 pt-4">
-                <p className="text-foreground font-tajawal text-right leading-relaxed">
-                  تقديم حلول استثمارية عقارية مبنية على تحليل دقيق للسوق، وتطوير الأصول العقارية بأسلوب احترافي، وتحقيق عوائد مستدامة من خلال الحوكمة والشفافية وكفاءة التشغيل.
-                </p>
-                <p className="text-foreground/80 font-inter text-left text-sm leading-relaxed">
-                  To deliver real estate investment solutions based on deep market analysis, develop assets professionally, and generate sustainable returns through governance, transparency, and operational excellence.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+          <TabsContent value="mission">
+            <Card className="shadow-elegant">
+              <CardContent className="p-8">
+                <div className="text-center space-y-4">
+                  <h4 className="text-2xl font-bold font-tajawal text-gradient-gold">
+                    رسالتنا
+                  </h4>
+                  <div className="text-right max-w-3xl mx-auto space-y-3">
+                    <p className="text-lg font-tajawal text-foreground/90 leading-relaxed">
+                      <span className="font-bold">•</span> دراسة السوق بدقة واقتناص الفرص الاستثمارية الواعدة
+                    </p>
+                    <p className="text-lg font-tajawal text-foreground/90 leading-relaxed">
+                      <span className="font-bold">•</span> تطوير فريق محترف قادر على تحقيق أعلى معايير الجودة
+                    </p>
+                    <p className="text-lg font-tajawal text-foreground/90 leading-relaxed">
+                      <span className="font-bold">•</span> تحقيق عوائد مستدامة للمستثمرين والشركاء
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          {/* Values */}
+          <TabsContent value="values">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <Card className="shadow-elegant">
+                <CardContent className="p-6 text-center">
+                  <p className="text-lg font-bold font-tajawal text-foreground">الشفافية والمصداقية</p>
+                </CardContent>
+              </Card>
+              <Card className="shadow-elegant">
+                <CardContent className="p-6 text-center">
+                  <p className="text-lg font-bold font-tajawal text-foreground">الكفاءة المهنية</p>
+                </CardContent>
+              </Card>
+              <Card className="shadow-elegant">
+                <CardContent className="p-6 text-center">
+                  <p className="text-lg font-bold font-tajawal text-foreground">الابتكار العقاري</p>
+                </CardContent>
+              </Card>
+              <Card className="shadow-elegant">
+                <CardContent className="p-6 text-center">
+                  <p className="text-lg font-bold font-tajawal text-foreground">حماية حقوق المستثمرين</p>
+                </CardContent>
+              </Card>
+              <Card className="shadow-elegant">
+                <CardContent className="p-6 text-center">
+                  <p className="text-lg font-bold font-tajawal text-foreground">المسؤولية الاجتماعية</p>
+                </CardContent>
+              </Card>
+              <Card className="shadow-elegant">
+                <CardContent className="p-6 text-center">
+                  <p className="text-lg font-bold font-tajawal text-foreground">تحقيق عوائد مستدامة</p>
+                </CardContent>
+              </Card>
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );

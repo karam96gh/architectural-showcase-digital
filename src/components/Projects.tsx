@@ -116,38 +116,22 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="py-16 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold font-tajawal text-gradient-gold mb-2">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold font-tajawal text-gradient-gold">
             مشاريعنا
           </h2>
-          <p className="text-3xl font-inter text-secondary">Our Projects</p>
-        </div>
-
-        {/* Statistics with CountUp Animation */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16 max-w-6xl mx-auto">
-          {stats.map((stat, index) => (
-            <Card key={index} className="shadow-elegant hover:shadow-gold transition-all duration-500 border-2 border-primary/20 hover:scale-105 transform">
-              <CardContent className="p-6 text-center space-y-3">
-                <p className="text-4xl sm:text-5xl font-bold text-primary font-inter">
-                  <CountUp end={stat.value} suffix={stat.suffix} duration={2500} />
-                </p>
-                <h3 className="text-lg font-bold font-tajawal text-foreground">{stat.labelAr}</h3>
-                <p className="text-sm font-inter text-muted-foreground">{stat.labelEn}</p>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-12">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden shadow-elegant hover:shadow-gold transition-all duration-300 group hover:-translate-y-2 transform">
+            <Card key={index} className="overflow-hidden shadow-elegant hover:shadow-gold transition-all duration-300 group hover:-translate-y-1 transform">
               <CardContent className="p-0">
                 {/* Project Image */}
-                <div className="h-64 overflow-hidden relative">
+                <div className="h-56 overflow-hidden relative">
                   <img 
                     src={project.image} 
                     alt={project.nameAr || project.nameTr || ''} 
@@ -155,48 +139,36 @@ const Projects = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent" />
                   <div className="absolute bottom-4 right-4 left-4 z-10">
-                    <Badge className="mb-3 bg-primary text-primary-foreground shadow-gold font-tajawal">
+                    <Badge className="mb-2 bg-primary text-primary-foreground shadow-gold font-tajawal text-xs">
                       {project.locationAr}
                     </Badge>
-                    <h3 className={`text-2xl sm:text-3xl font-bold ${project.nameAr ? 'font-tajawal text-right' : 'font-inter text-left'} text-white drop-shadow-lg`}>
+                    <h3 className={`text-xl sm:text-2xl font-bold ${project.nameAr ? 'font-tajawal text-right' : 'font-inter text-left'} text-white drop-shadow-lg`}>
                       {project.nameAr || project.nameTr}
                     </h3>
                   </div>
                 </div>
 
                 {/* Project Details */}
-                <div className="p-6 space-y-4 bg-card">
-                  <div className="flex justify-between items-center">
-                    <div className="text-right">
-                      <p className="text-sm font-tajawal text-muted-foreground mb-1">المساحة</p>
-                      <p className="text-2xl font-bold text-primary font-inter">
-                        {project.area} <span className="text-lg">m²</span>
-                      </p>
-                    </div>
-                    {(project.videoLink || project.driveLink) && (
-                      <a
-                        href={project.videoLink || project.driveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group-hover:translate-x-1 transform shadow-sm hover:shadow-gold"
-                      >
-                        <span className="text-sm font-tajawal font-medium">
-                          {project.videoLink ? 'شاهد الفيديو' : 'المزيد'}
-                        </span>
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    )}
-                  </div>
-
-                  <div className="pt-4 border-t border-border flex justify-between items-center">
-                    <Badge variant="outline" className="font-tajawal text-base">
-                      {project.locationAr}
-                    </Badge>
-                    <span className="text-sm text-muted-foreground font-inter">
-                      {project.location}
-                    </span>
-                  </div>
+                <div className="p-5 bg-card text-center">
+                  <p className="text-sm font-tajawal text-muted-foreground mb-1">المساحة</p>
+                  <p className="text-xl font-bold text-primary font-inter">
+                    {project.area} <span className="text-base">m²</span>
+                  </p>
                 </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Statistics with CountUp Animation */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          {stats.map((stat, index) => (
+            <Card key={index} className="shadow-elegant hover:shadow-gold transition-all duration-300">
+              <CardContent className="p-4 text-center space-y-2">
+                <p className="text-2xl sm:text-3xl font-bold text-primary font-inter">
+                  <CountUp end={stat.value} suffix={stat.suffix} duration={2500} />
+                </p>
+                <h3 className="text-sm font-bold font-tajawal text-foreground">{stat.labelAr}</h3>
               </CardContent>
             </Card>
           ))}
