@@ -14,57 +14,49 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-x-[-1]"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
-        <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-32 text-right">
+        <div className="max-w-4xl mr-0 ml-auto space-y-6 animate-fade-in">
           {/* Arabic Title */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-tajawal">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl word-like-heading">
             <span className="text-gradient-gold">لومار</span>
             <br />
             <span className="text-black">للتطوير العقاري</span>
           </h1>
 
-          {/* English Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-inter text-black/90">
-            LUMAR Developments
-          </h2>
-
           {/* Tagline */}
-          <p className="text-xl sm:text-2xl text-black/80 font-tajawal max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-black/80 word-like-text max-w-2xl leading-relaxed">
             شركة متخصصة في التطوير العقاري عالي القيمة في سوريا منذ 1986
           </p>
 
-          <p className="text-lg sm:text-xl text-black/70 font-inter max-w-3xl mx-auto">
-            Real Estate Development in the New Syria Since 1986
-          </p>
-
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+          <div className="flex flex-col sm:flex-row gap-3 justify-start items-start pt-6">
             <Button
-              size="lg"
-              className="bg-primary hover:bg-primary-dark text-primary-foreground shadow-gold font-tajawal text-xl px-10 py-7 hover:scale-105 transform transition-all duration-300"
+              size="default"
+              className="bg-primary hover:bg-primary-dark text-primary-foreground shadow-gold word-like-heading text-base px-6 py-3 hover:scale-105 transform transition-all duration-300"
               onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               استكشف مشاريعنا
             </Button>
             <Button
-              size="lg"
+              size="default"
               variant="outline"
-              className="border-2 border-primary bg-background/80 text-foreground hover:bg-primary hover:text-primary-foreground font-tajawal text-xl px-10 py-7 hover:scale-105 transform transition-all duration-300"
+              className="border-2 border-primary bg-background/80 text-foreground hover:bg-primary hover:text-primary-foreground word-like-heading text-base px-6 py-3 hover:scale-105 transform transition-all duration-300"
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               تواصل معنا
             </Button>
           </div>
 
-          {/* Scroll Indicator */}
-          <div className="pt-16 animate-bounce cursor-pointer" onClick={scrollToAbout}>
-            <ArrowDown className="h-8 w-8 text-primary mx-auto" />
-          </div>
+        </div>
+        
+        {/* Scroll Indicator - Centered */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer" onClick={scrollToAbout}>
+          <ArrowDown className="h-6 w-6 text-primary" />
         </div>
       </div>
 

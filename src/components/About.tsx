@@ -1,5 +1,6 @@
 import { Card, CardContent } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { Shield, Zap, Lightbulb, Users, Building2, TrendingUp } from 'lucide-react';
 import adnanLutfi from '@/assets/adnan-lutfi.png';
 import husamLutfi from '@/assets/husam-lutfi.png';
 
@@ -9,11 +10,11 @@ const About = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Company Introduction */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold font-tajawal text-gradient-gold mb-4">
+          <h2 className="text-3xl sm:text-4xl word-like-heading text-gradient-gold mb-4">
             من نحن
           </h2>
           <div className="max-w-3xl mx-auto space-y-4">
-            <p className="text-lg font-tajawal text-foreground/90 leading-relaxed text-center">
+            <p className="text-lg word-like-text text-foreground/90 leading-relaxed text-center">
               شركة متخصصة في التطوير العقاري عالي القيمة في سوريا، تركيزنا الأساسي على الاستثمار في الأصول ذات الأداء المرتفع واقتناص الفرص الاستثمارية الأفضل، بالاعتماد على الخبرة الطويلة في مجال التطوير العقاري التي تمتد منذ عام ١٩٨٦
             </p>
           </div>
@@ -108,18 +109,18 @@ const About = () => {
             <Card className="shadow-elegant">
               <CardContent className="p-8">
                 <div className="text-center space-y-4">
-                  <h4 className="text-2xl font-bold font-tajawal text-gradient-gold">
+                  <h4 className="text-2xl word-like-heading text-gradient-gold">
                     رسالتنا
                   </h4>
-                  <div className="text-right max-w-3xl mx-auto space-y-3">
-                    <p className="text-lg font-tajawal text-foreground/90 leading-relaxed">
-                      <span className="font-bold">•</span> دراسة السوق بدقة واقتناص الفرص الاستثمارية الواعدة
+                  <div className="text-center max-w-3xl mx-auto space-y-3">
+                    <p className="text-lg word-like-text text-foreground/90 leading-relaxed">
+                      <span className="word-like-heading">•</span> دراسة السوق بدقة واقتناص الفرص الاستثمارية الواعدة
                     </p>
-                    <p className="text-lg font-tajawal text-foreground/90 leading-relaxed">
-                      <span className="font-bold">•</span> تطوير فريق محترف قادر على تحقيق أعلى معايير الجودة
+                    <p className="text-lg word-like-text text-foreground/90 leading-relaxed">
+                      <span className="word-like-heading">•</span> تطوير فريق محترف قادر على تحقيق أعلى معايير الجودة
                     </p>
-                    <p className="text-lg font-tajawal text-foreground/90 leading-relaxed">
-                      <span className="font-bold">•</span> تحقيق عوائد مستدامة للمستثمرين والشركاء
+                    <p className="text-lg word-like-text text-foreground/90 leading-relaxed">
+                      <span className="word-like-heading">•</span> تحقيق عوائد مستدامة للمستثمرين والشركاء
                     </p>
                   </div>
                 </div>
@@ -133,60 +134,60 @@ const About = () => {
               <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="flex flex-col items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-2xl">✓</span>
+                    <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center">
+                      <Shield className="h-7 w-7 text-primary" />
                     </div>
-                    <p className="text-lg font-bold font-tajawal text-foreground">الشفافية والمصداقية</p>
+                    <p className="text-lg word-like-heading text-foreground">الشفافية والمصداقية</p>
                   </div>
                 </CardContent>
               </Card>
               <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="flex flex-col items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-2xl">⚡</span>
+                    <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center">
+                      <Zap className="h-7 w-7 text-primary" />
                     </div>
-                    <p className="text-lg font-bold font-tajawal text-foreground">الكفاءة المهنية</p>
+                    <p className="text-lg word-like-heading text-foreground">الكفاءة المهنية</p>
                   </div>
                 </CardContent>
               </Card>
               <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="flex flex-col items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-2xl">💡</span>
+                    <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center">
+                      <Lightbulb className="h-7 w-7 text-primary" />
                     </div>
-                    <p className="text-lg font-bold font-tajawal text-foreground">الابتكار العقاري</p>
+                    <p className="text-lg word-like-heading text-foreground">الابتكار العقاري</p>
                   </div>
                 </CardContent>
               </Card>
               <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="flex flex-col items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-2xl">🛡️</span>
+                    <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center">
+                      <Users className="h-7 w-7 text-primary" />
                     </div>
-                    <p className="text-lg font-bold font-tajawal text-foreground">حماية حقوق المستثمرين</p>
+                    <p className="text-lg word-like-heading text-foreground">حماية حقوق المستثمرين</p>
                   </div>
                 </CardContent>
               </Card>
               <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="flex flex-col items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-2xl">🤝</span>
+                    <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center">
+                      <Building2 className="h-7 w-7 text-primary" />
                     </div>
-                    <p className="text-lg font-bold font-tajawal text-foreground">المسؤولية الاجتماعية</p>
+                    <p className="text-lg word-like-heading text-foreground">المسؤولية الاجتماعية</p>
                   </div>
                 </CardContent>
               </Card>
               <Card className="shadow-elegant hover:shadow-gold transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="flex flex-col items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-2xl">📈</span>
+                    <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center">
+                      <TrendingUp className="h-7 w-7 text-primary" />
                     </div>
-                    <p className="text-lg font-bold font-tajawal text-foreground">تحقيق عوائد مستدامة</p>
+                    <p className="text-lg word-like-heading text-foreground">تحقيق عوائد مستدامة</p>
                   </div>
                 </CardContent>
               </Card>

@@ -14,8 +14,16 @@ export default {
     },
     extend: {
       fontFamily: {
-        'tajawal': ['Tajawal', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif'],
+        'helvetica': ['Helvetica', 'Arial', 'sans-serif'],
+        'helvetica-arabic': ['HelveticaNeueLT Arabic', 'Helvetica', 'Arial', 'sans-serif'],
+        'helvetica-arabic-light': ['HelveticaNeueLT Arabic Light', 'Helvetica Light', 'Arial', 'sans-serif'],
+        'helvetica-arabic-bold': ['HelveticaNeueLT Arabic Bold', 'Helvetica Bold', 'Arial', 'sans-serif'],
+        'helvetica-compressed': ['Helvetica Compressed', 'Helvetica', 'Arial', 'sans-serif'],
+        'helvetica-rounded-bold': ['Helvetica Rounded Bold', 'Helvetica Bold', 'Arial', 'sans-serif'],
+        'helvetica-light': ['Helvetica Light', 'Helvetica', 'Arial', 'sans-serif'],
+        'helvetica-bold': ['Helvetica Bold', 'Helvetica', 'Arial', 'sans-serif'],
+        'helvetica-oblique': ['Helvetica Oblique', 'Helvetica', 'Arial', 'sans-serif'],
+        'helvetica-bold-oblique': ['Helvetica Bold Oblique', 'Helvetica Bold', 'Arial', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

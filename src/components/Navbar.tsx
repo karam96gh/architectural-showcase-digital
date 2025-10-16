@@ -37,9 +37,24 @@ const Navbar = () => {
         isScrolled ? 'bg-card/95 backdrop-blur-md shadow-elegant' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Desktop Navigation - Right Side */}
+      <div className="container mx-auto px-2 sm:px-4 lg:px-6">
+        <div className={`flex items-center justify-between transition-all duration-300 ${
+          isScrolled ? 'h-16 sm:h-18 md:h-20' : 'h-24 sm:h-28 md:h-32'
+        }`}>
+          {/* Logo - Right Side */}
+          <a href="#home" className="flex items-center gap-2">
+            <img 
+              src={logo} 
+              alt="LUMAR Developments" 
+              className={`w-auto object-contain transition-all duration-300 ${
+                isScrolled 
+                  ? 'h-16 sm:h-18 md:h-20' 
+                  : 'h-20 sm:h-24 md:h-28 lg:h-32'
+              }`} 
+            />
+          </a>
+
+          {/* Desktop Navigation - Left Side */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
@@ -47,16 +62,11 @@ const Navbar = () => {
                 onClick={() => scrollToSection(item.href)}
                 className="group relative text-foreground/90 hover:text-primary transition-colors duration-300"
               >
-                <span className="font-tajawal font-medium text-lg">{item.label}</span>
+                <span className="word-like-text text-lg">{item.label}</span>
                 <span className="absolute -bottom-1 right-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
           </div>
-
-          {/* Logo - Left Side */}
-          <a href="#home" className="flex items-center gap-2">
-            <img src={logo} alt="LUMAR Developments" className="h-20 sm:h-22 w-auto" />
-          </a>
 
           {/* Mobile Menu Button */}
           <Button
@@ -78,7 +88,7 @@ const Navbar = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-right px-6 py-4 text-foreground/90 hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-tajawal font-medium text-lg"
+                className="block w-full text-right px-6 py-4 text-foreground/90 hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 word-like-text text-lg"
               >
                 {item.label}
               </button>

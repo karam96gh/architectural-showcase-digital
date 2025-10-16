@@ -2,6 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/HELVETICA.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007F;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Arabic';
+  src: url('/fonts/HELVETICANEUELTARABIC-ROMAN.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Arabic Light';
+  src: url('/fonts/HELVETICANEUELTARABIC-LIGHT.TTF') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Arabic Bold';
+  src: url('/fonts/HELVETICANEUELTARABIC-BOLD.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+  font-family: 'Helvetica Compressed';
+  src: url('/fonts/HELVETICA-COMPRESSED-5871D14B6903A.OTF') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Rounded Bold';
+  src: url('/fonts/HELVETICA-ROUNDED-BOLD-5871D05EAD8DE.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Oblique';
+  src: url('/fonts/HELVETICA-OBLIQUE.TTF') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Bold Oblique';
+  src: url('/fonts/HELVETICA-BOLDOBLIQUE.TTF') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Light';
+  src: url('/fonts/HELVETICA-LIGHT-587EBE5A59211.TTF') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Bold';
+  src: url('/fonts/HELVETICA-BOLD.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -120,8 +205,17 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Tajawal', 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
     direction: rtl;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-variant-ligatures: common-ligatures;
+    font-kerning: normal;
+    unicode-bidi: embed;
   }
   
   html {
@@ -132,6 +226,117 @@ All colors MUST be HSL.
   /* English text should be LTR */
   .ltr {
     direction: ltr;
+  }
+  
+  /* Font weight variations */
+  .font-light {
+    font-weight: 300;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .font-bold {
+    font-weight: 700;
+  }
+  
+  /* Improved line heights */
+  .leading-tight {
+    line-height: 1.25;
+  }
+  
+  .leading-relaxed {
+    line-height: 1.625;
+  }
+  
+  .leading-loose {
+    line-height: 2;
+  }
+  
+  /* Font Family Classes */
+  .font-helvetica {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  .font-helvetica-arabic {
+    font-family: 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+  
+  .font-helvetica-arabic-light {
+    font-family: 'HelveticaNeueLT Arabic Light', 'Helvetica Light', 'Arial', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  .font-helvetica-arabic-bold {
+    font-family: 'HelveticaNeueLT Arabic Bold', 'Helvetica Bold', 'Arial', sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+  
+  .font-helvetica-compressed {
+    font-family: 'Helvetica Compressed', 'Helvetica', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  .font-helvetica-rounded-bold {
+    font-family: 'Helvetica Rounded Bold', 'Helvetica Bold', 'Arial', sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  .font-helvetica-light {
+    font-family: 'Helvetica Light', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  .font-helvetica-bold {
+    font-family: 'Helvetica Bold', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  .font-helvetica-oblique {
+    font-family: 'Helvetica Oblique', 'Helvetica', 'Arial', sans-serif;
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  .font-helvetica-bold-oblique {
+    font-family: 'Helvetica Bold Oblique', 'Helvetica Bold', 'Arial', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
 
@@ -150,5 +355,76 @@ All colors MUST be HSL.
   
   .shadow-elegant {
     box-shadow: var(--shadow-elegant);
+  }
+  
+  /* Enhanced Font Rendering */
+  .font-render-optimized {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-variant-ligatures: common-ligatures;
+    font-kerning: normal;
+  }
+  
+  /* Word-like Typography */
+  .word-like-text {
+    font-family: 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    font-variant-ligatures: common-ligatures;
+    font-kerning: normal;
+  }
+  
+  .word-like-heading {
+    font-family: 'HelveticaNeueLT Arabic Bold', 'Helvetica Bold', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    letter-spacing: 0.02em;
+    font-variant-ligatures: common-ligatures;
+    font-kerning: normal;
+  }
+  
+  /* Enhanced Arabic Typography */
+  .arabic-text-optimized {
+    font-family: 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-variant-ligatures: common-ligatures;
+    font-kerning: normal;
+    text-align: right;
+    direction: rtl;
+    unicode-bidi: embed;
+  }
+  
+  /* Mixed Language Support */
+  .mixed-lang-text {
+    font-family: 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    unicode-range: U+0020-007F, U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+  }
+  
+  /* Phone Number Display */
+  .phone-number {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: embed;
+    font-feature-settings: "tnum" 1;
+    font-variant-numeric: tabular-nums;
   }
 }
