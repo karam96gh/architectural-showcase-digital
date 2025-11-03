@@ -4,16 +4,16 @@ import { ExternalLink } from 'lucide-react';
 import CountUp from './CountUp';
 
 // Import project images
-import yasimEvleriImg from '@/assets/projects/yasim-evleri.png';
-import bizimKonaklarImg from '@/assets/projects/bizim-konaklar.png';
+import yasimEvleriImg from '@/assets/projects/yasim-evleri.jpg';
+import bizimKonaklarImg from '@/assets/projects/bizim-konaklar.jpg';
 import zumrudAnka1Img from '@/assets/projects/زمرد.webp';
-import bilsa1Img from '@/assets/projects/women.png';
+import bilsa1Img from '@/assets/projects/bilsa.jpg';
 import cordobaImg from '@/assets/projects/qur1.webp';
 import cordobaImg2 from '@/assets/projects/qur2.webp';
 
 
 
-import womenUnionImg from '@/assets/projects/women.png';
+import womenUnionImg from '@/assets/projects/women.jpg';
 import officersImg from '@/assets/projects/officerss.webp';
 
 
