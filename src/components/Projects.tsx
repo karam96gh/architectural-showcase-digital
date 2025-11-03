@@ -8,7 +8,7 @@ import yasimEvleriImg from '@/assets/projects/yasim-evleri.jpg';
 import bizimKonaklarImg from '@/assets/projects/bizim-konaklar.jpg';
 import zumrudAnka1Img from '@/assets/projects/زمرد.webp';
 import bilsa1Img from '@/assets/projects/bilsa.jpg';
-import cordobaImg from '@/assets/projects/qur1.webp';
+import cordobaImg from '@/assets/projects/qur1.jpg';
 import cordobaImg2 from '@/assets/projects/qur2.webp';
 
 
@@ -56,7 +56,7 @@ const Projects = () => {
       videoLink: null,
     },
     {
-      nameAr: '1مجمع قرطبة',
+      nameAr: 'مجمع قرطبة 1',
       nameTr: null,
       area: '29,250',
       location: 'Aleppo',
@@ -65,7 +65,7 @@ const Projects = () => {
       driveLink: 'https://drive.google.com/drive/folders/1GL2elTVpDhz4lfPOSzt1a3v0F-JSbB7R?usp=drive_link',
     },
     {
-      nameAr: '2مجمع قرطبة',
+      nameAr: 'مجمع قرطبة 2',
       nameTr: null,
       area: '16,250',
       location: 'Aleppo',
