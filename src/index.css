@@ -24,90 +24,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Helvetica';
-  src: url('/fonts/HELVETICA.TTF') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0020-007F;
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLT Arabic';
-  src: url('/fonts/HELVETICANEUELTARABIC-ROMAN.TTF') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLT Arabic Light';
-  src: url('/fonts/HELVETICANEUELTARABIC-LIGHT.TTF') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLT Arabic Bold';
-  src: url('/fonts/HELVETICANEUELTARABIC-BOLD.TTF') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
-}
-
-@font-face {
-  font-family: 'Helvetica Compressed';
-  src: url('/fonts/HELVETICA-COMPRESSED-5871D14B6903A.OTF') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Helvetica Rounded Bold';
-  src: url('/fonts/HELVETICA-ROUNDED-BOLD-5871D05EAD8DE.OTF') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Helvetica Oblique';
-  src: url('/fonts/HELVETICA-OBLIQUE.TTF') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Helvetica Bold Oblique';
-  src: url('/fonts/HELVETICA-BOLDOBLIQUE.TTF') format('truetype');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Helvetica Light';
-  src: url('/fonts/HELVETICA-LIGHT-587EBE5A59211.TTF') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Helvetica Bold';
-  src: url('/fonts/HELVETICA-BOLD.TTF') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -220,7 +136,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Firjar', 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', sans-serif;
     direction: rtl;
     font-weight: 400;
     line-height: 1.6;
@@ -275,14 +191,14 @@ All colors MUST be HSL.
   
   /* Font Family Classes */
   .font-helvetica {
-    font-family: 'Firjar', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
   
   .font-helvetica-arabic {
-    font-family: 'Firjar', 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -290,7 +206,7 @@ All colors MUST be HSL.
   }
   
   .font-helvetica-arabic-light {
-    font-family: 'Firjar Light', 'HelveticaNeueLT Arabic Light', 'Helvetica Light', 'Arial', sans-serif;
+    font-family: 'Firjar Light', sans-serif;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -298,7 +214,7 @@ All colors MUST be HSL.
   }
   
   .font-helvetica-arabic-bold {
-    font-family: 'Firjar Bold', 'HelveticaNeueLT Arabic Bold', 'Helvetica Bold', 'Arial', sans-serif;
+    font-family: 'Firjar Bold', sans-serif;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -307,14 +223,14 @@ All colors MUST be HSL.
   }
   
   .font-helvetica-compressed {
-    font-family: 'Helvetica Compressed', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
   
   .font-helvetica-rounded-bold {
-    font-family: 'Helvetica Rounded Bold', 'Helvetica Bold', 'Arial', sans-serif;
+    font-family: 'Firjar Bold', sans-serif;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -322,7 +238,7 @@ All colors MUST be HSL.
   }
   
   .font-helvetica-light {
-    font-family: 'Firjar Light', 'Helvetica Light', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar Light', sans-serif;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -330,7 +246,7 @@ All colors MUST be HSL.
   }
   
   .font-helvetica-bold {
-    font-family: 'Firjar Bold', 'Helvetica Bold', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar Bold', sans-serif;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -338,7 +254,7 @@ All colors MUST be HSL.
   }
   
   .font-helvetica-oblique {
-    font-family: 'Helvetica Oblique', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', sans-serif;
     font-style: italic;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -346,7 +262,7 @@ All colors MUST be HSL.
   }
   
   .font-helvetica-bold-oblique {
-    font-family: 'Helvetica Bold Oblique', 'Helvetica Bold', 'Arial', sans-serif;
+    font-family: 'Firjar Bold', sans-serif;
     font-weight: 700;
     font-style: italic;
     -webkit-font-smoothing: antialiased;
@@ -388,7 +304,7 @@ All colors MUST be HSL.
   
   /* Word-like Typography */
   .word-like-text {
-    font-family: 'Firjar', 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -400,7 +316,7 @@ All colors MUST be HSL.
   }
   
   .word-like-heading {
-    font-family: 'Firjar Bold', 'HelveticaNeueLT Arabic Bold', 'Helvetica Bold', 'Arial', sans-serif;
+    font-family: 'Firjar Bold', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -412,7 +328,7 @@ All colors MUST be HSL.
   
   /* Enhanced Arabic Typography */
   .arabic-text-optimized {
-    font-family: 'Firjar', 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -426,7 +342,7 @@ All colors MUST be HSL.
   
   /* Mixed Language Support */
   .mixed-lang-text {
-    font-family: 'Firjar', 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -436,7 +352,7 @@ All colors MUST be HSL.
   
   /* Phone Number Display */
   .phone-number {
-    font-family: 'Firjar', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
