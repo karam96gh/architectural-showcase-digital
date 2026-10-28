@@ -3,6 +3,28 @@
 @tailwind utilities;
 
 /* Font Face Declarations */
+/* Firjar has no Latin digits; Rajdhani digits fill them in under the same family names */
+@font-face {
+  font-family: 'Firjar';
+  src: url('/fonts/firjar/Digits-Regular.woff2') format('woff2');
+  unicode-range: U+0030-0039;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firjar Light';
+  src: url('/fonts/firjar/Digits-Light.woff2') format('woff2');
+  unicode-range: U+0030-0039;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firjar Bold';
+  src: url('/fonts/firjar/Digits-Bold.woff2') format('woff2');
+  unicode-range: U+0030-0039;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Firjar';
   src: url('/fonts/firjar/Firjar-Regular.woff2') format('woff2');
