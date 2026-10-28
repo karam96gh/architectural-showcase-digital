@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="max-w-4xl mr-0 ml-auto space-y-6 animate-fade-in">
           {/* Arabic Title */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl word-like-heading">
-            <span className="text-gradient-gold">لومار</span>
+            <span className="text-gradient-gold">أثر</span>
             <br />
             <span className="text-black">للتطوير العقاري</span>
           </h1>

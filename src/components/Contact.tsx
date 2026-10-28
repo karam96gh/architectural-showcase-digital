@@ -17,14 +17,14 @@ const Contact = () => {
     {
       type: 'email',
       icon: Mail,
-      value: 'info@lumardevelop.com',
-      link: 'mailto:info@lumardevelop.com',
+      value: 'info@athardev.com',
+      link: 'mailto:info@athardev.com',
     },
     {
       type: 'email',
       icon: Mail,
-      value: 'hussam@lumardevelop.com',
-      link: 'mailto:hussam@lumardevelop.com',
+      value: 'hussam@athardev.com',
+      link: 'mailto:hussam@athardev.com',
     },
     {
       type: 'phone',
@@ -119,7 +119,7 @@ const Contact = () => {
               <div className="pt-6">
                 <Button
                   className="w-full bg-primary hover:bg-primary-dark text-primary-foreground shadow-gold word-like-heading text-xl py-7 hover:scale-105 transform transition-all duration-300"
-                  onClick={() => window.location.href = 'mailto:info@lumardevelop.com'}
+                  onClick={() => window.location.href = 'mailto:info@athardev.com'}
                 >
                   أرسل لنا رسالة
                 </Button>

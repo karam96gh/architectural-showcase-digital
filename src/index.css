@@ -4,6 +4,24 @@
 
 /* Font Face Declarations */
 @font-face {
+  font-family: 'Firjar';
+  src: url('/fonts/firjar/Firjar-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firjar Light';
+  src: url('/fonts/firjar/Firjar-Light.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firjar Bold';
+  src: url('/fonts/firjar/Firjar-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Helvetica';
   src: url('/fonts/HELVETICA.TTF') format('truetype');
   font-weight: 400;
@@ -95,29 +113,29 @@ All colors MUST be HSL.
   :root {
     /* Luxury Gold & Off-White Architectural Theme */
     --background: 40 20% 97%;
-    --foreground: 30 15% 15%;
+    --foreground: 29 36% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 30 15% 15%;
+    --card-foreground: 29 36% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 30 15% 15%;
+    --popover-foreground: 29 36% 15%;
 
     /* Gold Primary */
-    --primary: 39 41% 61%;        /* غامق */
+    --primary: 33 29% 61%;        /* غامق */
     --primary-foreground: 40 20% 97%;
-    --primary-dark: 39 41% 51%;   /* أغمق */
-    --primary-light: 36 33% 87%;  /* كاشف */
+    --primary-dark: 29 47% 37%;   /* أغمق */
+    --primary-light: 33 42% 82%;  /* كاشف */
 
 
     /* Elegant Secondary */
-    --secondary: 30 10% 25%;
+    --secondary: 29 36% 18%;
     --secondary-foreground: 40 20% 97%;
 
     --muted: 40 15% 90%;
     --muted-foreground: 30 10% 45%;
 
-    --accent: 39 41% 61%;         /* غامق */
+    --accent: 33 29% 61%;         /* غامق */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -125,15 +143,15 @@ All colors MUST be HSL.
 
     --border: 40 20% 85%;
     --input: 40 20% 90%;
-    --ring: 39 41% 61%;           /* غامق */
+    --ring: 33 29% 61%;           /* غامق */
 
     --radius: 0.5rem;
     
     /* Architectural Design Tokens */
-    --gradient-gold: linear-gradient(135deg, hsl(39 41% 61%) 0%, hsl(36 33% 87%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(30 15% 15% / 0.95) 0%, hsl(30 15% 15% / 0.85) 100%);
-    --shadow-gold: 0 10px 40px -10px hsl(39 41% 61% / 0.3);
-    --shadow-elegant: 0 20px 60px -15px hsl(30 15% 15% / 0.2);
+    --gradient-gold: linear-gradient(135deg, hsl(33 29% 61%) 0%, hsl(33 42% 82%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(29 36% 15% / 0.95) 0%, hsl(29 36% 15% / 0.85) 100%);
+    --shadow-gold: 0 10px 40px -10px hsl(33 29% 61% / 0.3);
+    --shadow-elegant: 0 20px 60px -15px hsl(29 36% 15% / 0.2);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -147,19 +165,19 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 30 15% 12%;
+    --background: 29 36% 12%;
     --foreground: 40 20% 95%;
 
-    --card: 30 15% 15%;
+    --card: 29 36% 15%;
     --card-foreground: 40 20% 95%;
 
-    --popover: 30 15% 15%;
+    --popover: 29 36% 15%;
     --popover-foreground: 40 20% 95%;
 
-    --primary: 39 41% 61%;        /* غامق */
-    --primary-foreground: 30 15% 12%;
-    --primary-dark: 39 41% 51%;
-    --primary-light: 36 33% 87%;  /* كاشف */
+    --primary: 33 29% 61%;        /* غامق */
+    --primary-foreground: 29 36% 12%;
+    --primary-dark: 29 47% 37%;
+    --primary-light: 33 42% 82%;  /* كاشف */
 
     --secondary: 40 20% 25%;
     --secondary-foreground: 40 20% 95%;
@@ -167,7 +185,7 @@ All colors MUST be HSL.
     --muted: 30 10% 20%;
     --muted-foreground: 40 15% 65%;
 
-    --accent: 39 41% 61%;         /* غامق */
+    --accent: 33 29% 61%;         /* غامق */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50%;
@@ -175,11 +193,11 @@ All colors MUST be HSL.
 
     --border: 30 15% 25%;
     --input: 30 15% 25%;
-    --ring: 39 41% 61%;           /* غامق */
+    --ring: 33 29% 61%;           /* غامق */
     
-    --gradient-gold: linear-gradient(135deg, hsl(39 41% 61%) 0%, hsl(36 33% 87%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(30 15% 15% / 0.95) 0%, hsl(30 15% 15% / 0.85) 100%);
-    --shadow-gold: 0 10px 40px -10px hsl(39 41% 61% / 0.4);
+    --gradient-gold: linear-gradient(135deg, hsl(33 29% 61%) 0%, hsl(33 42% 82%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(29 36% 15% / 0.95) 0%, hsl(29 36% 15% / 0.85) 100%);
+    --shadow-gold: 0 10px 40px -10px hsl(33 29% 61% / 0.4);
     --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.5);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -199,7 +217,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
     direction: rtl;
     font-weight: 400;
     line-height: 1.6;
@@ -254,14 +272,14 @@ All colors MUST be HSL.
   
   /* Font Family Classes */
   .font-helvetica {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', 'Helvetica', 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
   
   .font-helvetica-arabic {
-    font-family: 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -269,7 +287,7 @@ All colors MUST be HSL.
   }
   
   .font-helvetica-arabic-light {
-    font-family: 'HelveticaNeueLT Arabic Light', 'Helvetica Light', 'Arial', sans-serif;
+    font-family: 'Firjar Light', 'HelveticaNeueLT Arabic Light', 'Helvetica Light', 'Arial', sans-serif;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -277,7 +295,7 @@ All colors MUST be HSL.
   }
   
   .font-helvetica-arabic-bold {
-    font-family: 'HelveticaNeueLT Arabic Bold', 'Helvetica Bold', 'Arial', sans-serif;
+    font-family: 'Firjar Bold', 'HelveticaNeueLT Arabic Bold', 'Helvetica Bold', 'Arial', sans-serif;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -301,7 +319,7 @@ All colors MUST be HSL.
   }
   
   .font-helvetica-light {
-    font-family: 'Helvetica Light', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar Light', 'Helvetica Light', 'Helvetica', 'Arial', sans-serif;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -309,7 +327,7 @@ All colors MUST be HSL.
   }
   
   .font-helvetica-bold {
-    font-family: 'Helvetica Bold', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar Bold', 'Helvetica Bold', 'Helvetica', 'Arial', sans-serif;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -336,7 +354,7 @@ All colors MUST be HSL.
 
 @layer utilities {
   .text-gradient-gold {
-    background: linear-gradient(to right, hsl(39 41% 61%), hsl(39 41% 61%));
+    background: linear-gradient(to right, hsl(33 29% 61%), hsl(33 29% 61%));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -344,7 +362,7 @@ All colors MUST be HSL.
   }
   
   .border-gradient-gold {
-    border-image: linear-gradient(135deg, hsl(39 41% 61%), hsl(36 33% 87%)) 1;
+    border-image: linear-gradient(135deg, hsl(33 29% 61%), hsl(33 42% 82%)) 1;
   }
   
   .shadow-gold {
@@ -367,7 +385,7 @@ All colors MUST be HSL.
   
   /* Word-like Typography */
   .word-like-text {
-    font-family: 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -379,7 +397,7 @@ All colors MUST be HSL.
   }
   
   .word-like-heading {
-    font-family: 'HelveticaNeueLT Arabic Bold', 'Helvetica Bold', 'Arial', sans-serif;
+    font-family: 'Firjar Bold', 'HelveticaNeueLT Arabic Bold', 'Helvetica Bold', 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -391,7 +409,7 @@ All colors MUST be HSL.
   
   /* Enhanced Arabic Typography */
   .arabic-text-optimized {
-    font-family: 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -405,7 +423,7 @@ All colors MUST be HSL.
   
   /* Mixed Language Support */
   .mixed-lang-text {
-    font-family: 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', 'HelveticaNeueLT Arabic', 'Helvetica', 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -415,7 +433,7 @@ All colors MUST be HSL.
   
   /* Phone Number Display */
   .phone-number {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Firjar', 'Helvetica', 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;

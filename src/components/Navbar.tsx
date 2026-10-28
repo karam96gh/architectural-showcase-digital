@@ -45,7 +45,7 @@ const Navbar = () => {
           <a href="#home" className="flex items-center gap-2">
             <img 
               src={logo} 
-              alt="LUMAR Developments" 
+              alt="ATHAR Developments" 
               className={`w-auto object-contain transition-all duration-300 ${
                 isScrolled 
                   ? 'h-16 sm:h-18 md:h-20' 

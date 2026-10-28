@@ -1,4 +1,4 @@
-import logo from '@/assets/logo.png';
+import logoLight from '@/assets/logo-light.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,12 +8,12 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-6">
           {/* Logo */}
-          <img src={logo} alt="LUMAR Developments" className="h-16 w-auto" />
+          <img src={logoLight} alt="ATHAR Developments" className="h-16 w-auto" />
 
           {/* Company Name */}
           <div className="text-center space-y-2">
-            <h3 className="text-2xl font-bold font-tajawal">لومار للتطوير العقاري</h3>
-            <p className="text-xl font-inter text-primary-foreground/80">LUMAR Developments</p>
+            <h3 className="text-2xl font-bold font-tajawal">أثر للتطوير العقاري</h3>
+            <p className="text-xl font-inter text-primary-foreground/80">ATHAR Developments</p>
           </div>
 
           {/* Tagline */}
@@ -27,10 +27,10 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center space-y-2">
             <p className="text-sm text-primary-foreground/60 font-inter">
-              © {currentYear} LUMAR Developments. All rights reserved.
+              © {currentYear} ATHAR Developments. All rights reserved.
             </p>
             <p className="text-sm text-primary-foreground/60 font-tajawal">
-              جميع الحقوق محفوظة © {currentYear} لومار للتطوير العقاري
+              جميع الحقوق محفوظة © {currentYear} أثر للتطوير العقاري
             </p>
           </div>
         </div>
